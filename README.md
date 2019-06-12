@@ -2,7 +2,7 @@
 
 Rare Event Classification in Multivariate Time Series.
 
-Multivariate time series data is produced from a pulp and paper industry with a rare event associated with it. It is an unwanted event in the process-a paper break.
+Multivariate time series data is collected from a pulp and paper industry with a rare event associated with it. It is an unwanted event in the process-a paper break.
 
 The objective of the problem is predict the event (paper break) before it occurs.
 
