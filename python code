@@ -179,89 +179,60 @@ logreg10.fit(x10_train_os, y10_train_os)
 
 ########### CLASSIFICATION REPORT FOR EACH FOLD ##########
 
-print('FOLD 1 CLASSIFICATION REPORT','\n')
+
 y_pred_1 = logreg1.predict(x_test_1)
+print('FOLD 1 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_1,y_pred_1),'\n')
+print(confusion_matrix(y_test_1, y_pred_1),'\n')
 
-print('FOLD 2 CLASSIFICATION REPORT','\n')
 y_pred_2 = logreg2.predict(x_test_2)
+print('FOLD 2 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_2,y_pred_2),'\n')
+print(confusion_matrix(y_test_2, y_pred_2),'\n')
 
-print('FOLD 3 CLASSIFICATION REPORT','\n')
 y_pred_3 = logreg3.predict(x_test_3)
+print('FOLD 3 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_3,y_pred_3),'\n')
+print(confusion_matrix(y_test_3, y_pred_3),'\n')
 
-print('FOLD 4 CLASSIFICATION REPORT','\n')
 y_pred_4 = logreg4.predict(x_test_4)
+print('FOLD 4 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_4,y_pred_4),'\n')
+print(confusion_matrix(y_test_4, y_pred_4),'\n')
 
-print('FOLD 5 CLASSIFICATION REPORT','\n')
 y_pred_5 = logreg5.predict(x_test_5)
+print('FOLD 5 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_5,y_pred_5),'\n')
+print(confusion_matrix(y_test_5, y_pred_5),'\n')
 
-print('FOLD 6 CLASSIFICATION REPORT','\n')
 y_pred_6 = logreg6.predict(x_test_6)
+print('FOLD 6 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_6,y_pred_6),'\n')
+print(confusion_matrix(y_test_6, y_pred_6),'\n')
 
-print('FOLD 7 CLASSIFICATION REPORT','\n')
 y_pred_7 = logreg7.predict(x_test_7)
+print('FOLD 7 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_7,y_pred_7),'\n')
+print(confusion_matrix(y_test_7, y_pred_7),'\n')
 
-print('FOLD 8 CLASSIFICATION REPORT','\n')
 y_pred_8 = logreg8.predict(x_test_8)
+print('FOLD 8 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_8,y_pred_8),'\n')
+print(confusion_matrix(y_test_8, y_pred_8),'\n')
 
-print('FOLD 9 CLASSIFICATION REPORT','\n')
 y_pred_9 = logreg9.predict(x_test_9)
+print('FOLD 9 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
 print(classification_report(y_test_9,y_pred_9),'\n')
+print(confusion_matrix(y_test_9, y_pred_9),'\n')
 
-print('FOLD 10 CLASSIFICATION REPORT','\n')
 y_pred_10 = logreg10.predict(x_test_10)
+print('FOLD 10 CLASSIFICATION REPORT & CONFUSION MATRIX ','\n')
 print(classification_report(y_test_10,y_pred_10),'\n')
+print(confusion_matrix(y_test_10, y_pred_10),'\n')
 
-######## CONFUSION MATRIX FOR EACH FOLD ###########
-
-print('FOLD 1 CONFUSION MATRIX','\n')
-confusion_matrix_1 = confusion_matrix(y_test_1, y_pred_1)
-print(confusion_matrix_1,'\n')
-
-print('FOLD 2 CONFUSION MATRIX','\n')
-confusion_matrix_2 = confusion_matrix(y_test_2, y_pred_2)
-print(confusion_matrix_2,'\n')
-
-print('FOLD 3 CONFUSION MATRIX','\n')
-confusion_matrix_3 = confusion_matrix(y_test_3, y_pred_3)
-print(confusion_matrix_3,'\n')
-
-print('FOLD 4 CONFUSION MATRIX','\n')
-confusion_matrix_4 = confusion_matrix(y_test_4, y_pred_4)
-print(confusion_matrix_4,'\n')
-
-print('FOLD 5 CONFUSION MATRIX','\n')
-confusion_matrix_5 = confusion_matrix(y_test_5, y_pred_5)
-print(confusion_matrix_5,'\n')
-
-print('FOLD 6 CONFUSION MATRIX','\n')
-confusion_matrix_6 = confusion_matrix(y_test_6, y_pred_6)
-print(confusion_matrix_6,'\n')
-
-print('FOLD 7 CONFUSION MATRIX','\n')
-confusion_matrix_7 = confusion_matrix(y_test_7, y_pred_7)
-print(confusion_matrix_7,'\n')
-
-print('FOLD 8 CONFUSION MATRIX','\n')
-confusion_matrix_8 = confusion_matrix(y_test_8, y_pred_8)
-print(confusion_matrix_8,'\n')
-
-print('FOLD 9 CONFUSION MATRIX','\n')
-confusion_matrix_9 = confusion_matrix(y_test_9, y_pred_9)
-print(confusion_matrix_9,'\n')
-
-print('FOLD 10 CONFUSION MATRIX','\n')
-confusion_matrix_10 = confusion_matrix(y_test_10, y_pred_10)
-print(confusion_matrix_10,'\n')
 
 ######### ACCURACY FOR EACH FOLD ###########
+
 
 print("ACCURACY FOR FOLD 1:",accuracy_score(y_test_1, y_pred_1),'\n')
 
