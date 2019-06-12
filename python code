@@ -1,4 +1,4 @@
-######### Import necessary libraries ########
+######### Import libraries ########
 
 import pandas as pd
 import numpy as np
@@ -226,6 +226,117 @@ print(classification_report(y_test_9,y_pred_9),'\n')
 print(confusion_matrix(y_test_9, y_pred_9),'\n')
 
 y_pred_10 = logreg10.predict(x_test_10)
+print('FOLD 10 CLASSIFICATION REPORT & CONFUSION MATRIX ','\n')
+print(classification_report(y_test_10,y_pred_10),'\n')
+print(confusion_matrix(y_test_10, y_pred_10),'\n')
+
+
+######### ACCURACY FOR EACH FOLD ###########
+
+
+print("ACCURACY FOR FOLD 1:",accuracy_score(y_test_1, y_pred_1),'\n')
+
+print("ACCURACY FOR FOLD 2:",accuracy_score(y_test_2, y_pred_2),'\n')
+
+print("ACCURACY FOR FOLD3:",accuracy_score(y_test_3, y_pred_3),'\n')
+
+print("ACCURACY FOR FOLD 4:",accuracy_score(y_test_4, y_pred_4),'\n')
+
+print("ACCURACY FOR FOLD5:",accuracy_score(y_test_5, y_pred_5),'\n')
+
+print("ACCURACY FOR FOLD 6:",accuracy_score(y_test_6, y_pred_6),'\n')
+
+print("ACCURACY FOR FOLD 7:",accuracy_score(y_test_7, y_pred_7),'\n')
+
+print("ACCURACY FOR FOLD 8:",accuracy_score(y_test_8, y_pred_8),'\n')
+
+print("ACCURACY FOR FOLD 9:",accuracy_score(y_test_9, y_pred_9),'\n')
+
+print("ACCURACY FOR FOLD 10:",accuracy_score(y_test_10, y_pred_10),'\n')
+
+
+########### PERFORM RANDOM FOREST #############
+
+RF_1= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_1.fit(x1_train_os, y1_train_os)
+
+RF_2= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_2.fit(x2_train_os, y2_train_os)
+
+RF_3= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_3.fit(x3_train_os, y3_train_os)
+
+RF_4= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_4.fit(x4_train_os, y4_train_os)
+
+RF_5= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_5.fit(x5_train_os, y5_train_os)
+
+RF_6= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_6.fit(x6_train_os, y6_train_os)
+
+RF_7= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_7.fit(x7_train_os, y7_train_os)
+
+RF_8= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_8.fit(x8_train_os, y8_train_os)
+
+RF_9= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_9.fit(x9_train_os, y9_train_os)
+
+RF_10= RandomForestClassifier(n_estimators = 100, class_weight = 'balanced')
+RF_10.fit(x10_train_os, y10_train_os)
+
+
+########### CLASSIFICATION REPORT & CONFUSION MATRIX FOR EACH FOLD ##########
+
+
+y_pred_1 = RF_1.predict(x_test_1)
+print('FOLD 1 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_1,y_pred_1),'\n')
+print(confusion_matrix(y_test_1, y_pred_1),'\n')
+
+y_pred_2 = RF_2.predict(x_test_2)
+print('FOLD 2 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_2,y_pred_2),'\n')
+print(confusion_matrix(y_test_2, y_pred_2),'\n')
+
+y_pred_3 = RF_3.predict(x_test_3)
+print('FOLD 3 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_3,y_pred_3),'\n')
+print(confusion_matrix(y_test_3, y_pred_3),'\n')
+
+y_pred_4 = RF_4.predict(x_test_4)
+print('FOLD 4 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_4,y_pred_4),'\n')
+print(confusion_matrix(y_test_4, y_pred_4),'\n')
+
+y_pred_5 = RF_5.predict(x_test_5)
+print('FOLD 5 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_5,y_pred_5),'\n')
+print(confusion_matrix(y_test_5, y_pred_5),'\n')
+
+y_pred_6 = RF_6.predict(x_test_6)
+print('FOLD 6 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_6,y_pred_6),'\n')
+print(confusion_matrix(y_test_6, y_pred_6),'\n')
+
+y_pred_7 = RF_7.predict(x_test_7)
+print('FOLD 7 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_7,y_pred_7),'\n')
+print(confusion_matrix(y_test_7, y_pred_7),'\n')
+
+y_pred_8 = RF_8.predict(x_test_8)
+print('FOLD 8 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_8,y_pred_8),'\n')
+print(confusion_matrix(y_test_8, y_pred_8),'\n')
+
+y_pred_9 = RF_9.predict(x_test_9)
+print('FOLD 9 CLASSIFICATION REPORT & CONFUSION MATRIX','\n')
+print(classification_report(y_test_9,y_pred_9),'\n')
+print(confusion_matrix(y_test_9, y_pred_9),'\n')
+
+y_pred_10 = RF_10.predict(x_test_10)
 print('FOLD 10 CLASSIFICATION REPORT & CONFUSION MATRIX ','\n')
 print(classification_report(y_test_10,y_pred_10),'\n')
 print(confusion_matrix(y_test_10, y_pred_10),'\n')
