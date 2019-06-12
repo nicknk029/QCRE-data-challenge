@@ -8,3 +8,40 @@ from sklearn.preprocessing import StandardScaler
 from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.metrics import confusion_matrix,classification_report
+
+######### ASSIGN X & y ########
+
+X = data.iloc[:,1:123].values
+y = data['y'].values
+
+######### TRAIN, TEST SPLIT ########
+
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.10, random_state = 1,stratify = y)
+
+######### SMOTE-OVERSAMPLING TECHNIQUE #######
+
+sm = SMOTE()
+X_train_1, y_train_1 = sm.fit_sample(X_train, y_train.ravel())
+
+######### STANDARDIZATION ########
+
+sc = StandardScaler()
+X_train_tran = sc.fit_transform(X_train_1)
+X_test_tran = sc.transform(X_test)
+
+######### NEURAL NETWORKS ########
+
+classifier = Sequential()
+classifier.add(Dense(122,input_dim =122, activation='relu',kernel_initializer = 'uniform'))
+classifier.add(Dense(122,activation='relu',kernel_initializer='uniform'))
+classifier.add(Dense(61,activation='relu',kernel_initializer='uniform'))
+classifier.add(Dense(2,activation='softmax',kernel_initializer='uniform'))
+classifier.compile( optimizer='adam', loss = 'sparse_categorical_crossentropy', metrics=['accuracy'])
+classifier.fit(X_train_tran,y_train_1,epochs=10,batch_size = 100)
+
+######### CLASSIFICATION REPORT & CONFUSION MATRIX ########
+
+predictions=classifier.predict(X_test_tran)
+predictions_classes=classifier.predict_classes(X_test_tran)
+print(confusion_matrix(y_test,predictions_classes))
+print(classification_report(y_test,predictions_classes))
