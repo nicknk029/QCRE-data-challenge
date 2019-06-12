@@ -9,6 +9,10 @@ from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.metrics import confusion_matrix,classification_report
 
+######## ASSIGN THE ORGINAL EXCEL FILE TO 'data' DATAFRAME ###########
+
+data = pd.read_excel('shifted_1.xlsx')
+
 ######### ASSIGN X & y ########
 
 X = data.iloc[:,1:123].values
