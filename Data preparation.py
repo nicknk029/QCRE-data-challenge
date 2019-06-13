@@ -138,5 +138,4 @@ writer = pd.ExcelWriter( 'shifted_3.xlsx' )
 clean_data_nn.to_excel( writer, 'Sheet1', index = False )
 writer.save()
 
-###### TOTAL THERE WILL BE THREE NEW EXCEL FILES. WE WILL BE TESTING DIFFERENT MACHINE LEARNING ALGORITHMS ON THESE EXCEL FILES ########
-
+###### TOTAL THERE WILL BE THREE NEW EXCEL FILES ########
