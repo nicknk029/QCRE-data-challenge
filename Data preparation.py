@@ -7,6 +7,7 @@ import numpy as np
 ######## ASSIGN THE ORIGINAL EXCEL FILE TO raw_train DATAFRAME ##########
 
 raw_train = pd.read_excel( 'processminer-rareevent.xlsx' )
+print( raw_train.head() )
 
 ############ SHIFT THE y COLUMN UP BY 1 ROW #############
 
