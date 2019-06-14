@@ -10,7 +10,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 ######## ASSIGN THE ORGINAL EXCEL FILE TO clean_train DATAFRAME ###########
 
-clean_train = pd.read_excel( 'shifted_1.xlsx' )
+clean_train = pd.read_excel( 'shifted_1.xlsx' ) #### shifted_1.xlsx, the file which we got from data preparation ####
 cols=[ 'x%d' % i for i in range( 1, 123, 1 ) ]
 cols.insert( 0,'y' )
 clean_train.columns = [ cols ]
@@ -39,43 +39,43 @@ for train_index, test_index in skf.split( x, y ):
 
 tr_fold_1 = clean_train.iloc[ tr_fold[0] ]
 y_train_1 = tr_fold_1['y']
-x_train_1 = tr_fold_1.drop( columns = ['y'], axis = 1 )
+x_train_1 = tr_fold_1.iloc[:,1:123]
 
 tr_fold_2 = clean_train.iloc[ tr_fold[1] ]
 y_train_2 = tr_fold_2['y']
-x_train_2 = tr_fold_2.drop( columns = ['y'], axis = 1 )
+x_train_2 = tr_fold_2.iloc[:,1:123]
 
 tr_fold_3 = clean_train.iloc[ tr_fold[2] ]
 y_train_3 = tr_fold_3['y']
-x_train_3 = tr_fold_3.drop( columns = ['y'], axis = 1 )
+x_train_3 = tr_fold_3.iloc[:,1:123]
 
 tr_fold_4 = clean_train.iloc[ tr_fold[3] ]
 y_train_4 = tr_fold_4['y']
-x_train_4 = tr_fold_4.drop( columns = ['y'], axis = 1 )
+x_train_4 = tr_fold_4.iloc[:,1:123]
 
 tr_fold_5 = clean_train.iloc[ tr_fold[4] ]
 y_train_5 = tr_fold_5['y']
-x_train_5 = tr_fold_5.drop( columns = ['y'], axis = 1 )
+x_train_5 = tr_fold_5.iloc[:,1:123]
 
 tr_fold_6 = clean_train.iloc[ tr_fold[5] ]
 y_train_6 = tr_fold_6['y']
-x_train_6 = tr_fold_6.drop( columns = ['y'], axis = 1 )
+x_train_6 = tr_fold_6.iloc[:,1:123]
 
 tr_fold_7 = clean_train.iloc[ tr_fold[6] ]
 y_train_7 = tr_fold_7['y']
-x_train_7 = tr_fold_7.drop( columns = ['y'], axis = 1 )
+x_train_7 = tr_fold_7.iloc[:,1:123]
 
 tr_fold_8 = clean_train.iloc[ tr_fold[7] ]
 y_train_8 = tr_fold_8['y']
-x_train_8 = tr_fold_8.drop( columns = ['y'], axis = 1 )
+x_train_8 = tr_fold_8.iloc[:,1:123]
 
 tr_fold_9 = clean_train.iloc[ tr_fold[8] ]
 y_train_9 = tr_fold_9['y']
-x_train_9 = tr_fold_9.drop( columns = ['y'], axis = 1 )
+x_train_9 = tr_fold_9.iloc[:,1:123]
 
 tr_fold_10 = clean_train.iloc[ tr_fold[9] ]
 y_train_10 = tr_fold_2['y']
-x_train_10 = tr_fold_2.drop( columns = ['y'], axis = 1 )
+x_train_10 = tr_fold_2.iloc[:,1:123]
 
 ########### PERFORM SMOTE-OVERSAMPLING TECHNIQUE TO TRAIN DATA ###########
 
@@ -113,43 +113,43 @@ x10_train_os, y10_train_os = sm_10.fit_sample( x_train_10, y_train_10.values.rav
 
 te_fold_1 = clean_train.iloc[ te_fold[0] ]
 y_test_1 = te_fold_1['y']
-x_test_1 = te_fold_1.drop( columns = ['y'], axis = 1 )
+x_test_1 = te_fold_1.iloc[:,1:123]
 
 te_fold_2 = clean_train.iloc[ te_fold[1] ]
 y_test_2 = te_fold_2['y']
-x_test_2 = te_fold_2.drop( columns = ['y'], axis = 1 )
+x_test_2 = te_fold_2.iloc[:,1:123]
 
 te_fold_3 = clean_train.iloc[ te_fold[2] ]
 y_test_3 = te_fold_3['y']
-x_test_3 = te_fold_3.drop( columns = ['y'], axis = 1 )
+x_test_3 = te_fold_3.iloc[:,1:123]
 
 te_fold_4 = clean_train.iloc[ te_fold[3] ]
 y_test_4 = te_fold_4['y']
-x_test_4 = te_fold_4.drop( columns = ['y'], axis = 1 )
+x_test_4 = te_fold_4.iloc[:,1:123]
 
 te_fold_5 = clean_train.iloc[ te_fold[4] ]
 y_test_5 = te_fold_5['y']
-x_test_5 = te_fold_5.drop( columns = ['y'], axis = 1 )
+x_test_5 = te_fold_5.iloc[:,1:123]
 
 te_fold_6 = clean_train.iloc[ te_fold[5] ]
 y_test_6 = te_fold_6['y']
-x_test_6 = te_fold_6.drop( columns = ['y'], axis = 1 )
+x_test_6 = te_fold_6.iloc[:,1:123]
 
 te_fold_7 = clean_train.iloc[ te_fold[6] ]
 y_test_7 = te_fold_7['y']
-x_test_7 = te_fold_7.drop( columns = ['y'], axis = 1 ) 
+x_test_7 = te_fold_7.iloc[:,1:123] 
 
 te_fold_8 = clean_train.iloc[ te_fold[7] ]
 y_test_8 = te_fold_8['y']
-x_test_8 = te_fold_8.drop( columns = ['y'], axis = 1 )
+x_test_8 = te_fold_8.iloc[:,1:123]
 
 te_fold_9 = clean_train.iloc[ te_fold[8] ]
 y_test_9 = te_fold_9['y']
-x_test_9 = te_fold_9.drop( columns = ['y'], axis = 1 )
+x_test_9 = te_fold_9.iloc[:,1:123]
 
 te_fold_10 = clean_train.iloc[ te_fold[9] ]
 y_test_10 = te_fold_10['y']
-x_test_10 = te_fold_10.drop( columns = ['y'], axis = 1 )
+x_test_10 = te_fold_10.iloc[:,1:123]
 
 ########### PERFORM LOGISTIC REGRESSION #############
 
@@ -334,13 +334,13 @@ print( confusion_matrix( y_test_10, y_pred_RF10 ), '\n' )
 
 ######### ACCURACY FOR EACH FOLD ###########
 
-print( "ACCURACY FOR FOLD 1:", accuracy_score( y_test_1, y_pred_1 ), '\n' )
-print( "ACCURACY FOR FOLD 2:", accuracy_score( y_test_2, y_pred_2 ), '\n' )
-print( "ACCURACY FOR FOLD 3:", accuracy_score( y_test_3, y_pred_3 ), '\n' )
-print( "ACCURACY FOR FOLD 4:", accuracy_score( y_test_4, y_pred_4 ), '\n' )
-print( "ACCURACY FOR FOLD 5:", accuracy_score( y_test_5, y_pred_5 ), '\n' )
-print( "ACCURACY FOR FOLD 6:", accuracy_score( y_test_6, y_pred_6 ), '\n' )
-print( "ACCURACY FOR FOLD 7:", accuracy_score( y_test_7, y_pred_7 ), '\n' )
-print( "ACCURACY FOR FOLD 8:", accuracy_score( y_test_8, y_pred_8 ), '\n' )
-print( "ACCURACY FOR FOLD 9:", accuracy_score( y_test_9, y_pred_9 ), '\n' )
-print( "ACCURACY FOR FOLD 10:", accuracy_score( y_test_10, y_pred_10 ), '\n' )
+print( "ACCURACY FOR FOLD 1:", accuracy_score( y_test_1, y_pred_RF1 ), '\n' )
+print( "ACCURACY FOR FOLD 2:", accuracy_score( y_test_2, y_pred_RF2 ), '\n' )
+print( "ACCURACY FOR FOLD 3:", accuracy_score( y_test_3, y_pred_RF3 ), '\n' )
+print( "ACCURACY FOR FOLD 4:", accuracy_score( y_test_4, y_pred_RF4 ), '\n' )
+print( "ACCURACY FOR FOLD 5:", accuracy_score( y_test_5, y_pred_RF5 ), '\n' )
+print( "ACCURACY FOR FOLD 6:", accuracy_score( y_test_6, y_pred_RF6 ), '\n' )
+print( "ACCURACY FOR FOLD 7:", accuracy_score( y_test_7, y_pred_RF7 ), '\n' )
+print( "ACCURACY FOR FOLD 8:", accuracy_score( y_test_8, y_pred_RF8 ), '\n' )
+print( "ACCURACY FOR FOLD 9:", accuracy_score( y_test_9, y_pred_RF9 ), '\n' )
+print( "ACCURACY FOR FOLD 10:", accuracy_score( y_test_10, y_pred_RF10 ), '\n' )
