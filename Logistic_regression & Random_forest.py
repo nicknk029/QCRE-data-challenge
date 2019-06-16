@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.model_selection import StratifiedKFold
 from imblearn.over_sampling import SMOTE
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 
 ######## ASSIGN THE ORGINAL EXCEL FILE TO clean_train DATAFRAME ###########
