@@ -11,7 +11,7 @@ from sklearn.metrics import confusion_matrix, classification_report, accuracy_sc
 
 ######## ASSIGN THE ORGINAL EXCEL FILE TO 'data' DATAFRAME ###########
 
-data = pd.read_excel('shifted_1.xlsx')
+data = pd.read_excel('shifted_1.xlsx')   #### shifted_1.xlsx, the file which we got from data preparation ####
 cols=[ 'x%d' % i for i in range( 1, 123, 1 ) ]
 cols.insert( 0,'y' )
 data.columns = [ cols ]
@@ -59,6 +59,3 @@ print( 'CLASSIFICATION REPORT & CONFUSION MATRIX', '\n' )
 print( classification_report( y_test, y_pred ), '\n' )
 print( confusion_matrix( y_test, y_pred ), '\n' )
 print( "ACCURACY :", accuracy_score( y_test, y_pred ), '\n' )
-
-
-
