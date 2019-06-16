@@ -183,7 +183,7 @@ logreg9.fit( x9_train_os, y9_train_os )
 logreg10 = LogisticRegression( class_weight = 'balanced', max_iter = 10000, penalty = 'l1', solver = 'saga', C = 0.01 )
 logreg10.fit( x10_train_os, y10_train_os )
 
-########### CLASSIFICATION REPORT FOR EACH FOLD ##########
+########### CLASSIFICATION REPORT & CONFUSION MATRIX FOR EACH FOLD ##########
 
 y_pred_1 = logreg1.predict( x_test_1 )
 print( 'FOLD 1 CLASSIFICATION REPORT & CONFUSION MATRIX', '\n' )
